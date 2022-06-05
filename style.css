@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nunito;
+  font-size: 62.5%;
+}
+body {
+  background-color: azure;
+}
+ul li a,
+ul {
+  list-style: none;
+  text-decoration: none;
+  color: azure;
+}
+.container-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+.nav {
+  width: 100vw;
+  max-width: 1000px;
+  height: min-content;
+  max-height: 180px;
+  background: #333;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "image image photo"
+    "list list photo";
+}
+.nav .img-diario {
+  width: 100%;
+  padding: 10px;
+  background-color: azure;
+  grid-area: image;
+}
+.nav .nav-bar {
+  display: grid;
+  grid-area: list;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.nav .img-Ronaldo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-area: photo;
+}
+.nav .nav-bar li {
+  display: grid;
+  place-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: all 150ms;
+}
+.nav .nav-bar li a {
+  transition: all 200ms;
+}
+.nav .nav-bar li:hover a {
+  color: #6888a7;
+  transform: scale(1.3);
+}
+.nav .nav-bar li:hover {
+  background-color: azure;
+}
+.nav .nav-bar li:active a {
+  transform: scale(1);
+}
+
+@media screen and (max-width: 640px) {
+  .nav .img-Ronaldo {
+    display: none;
+  }
+  .nav {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+  .nav .img-diario {
+    position: fixed;
+  }
+  .bio-open__title {
+  }
+  .bio {
+    margin-top: 10px;
+  }
+}
+
+/* segunda seccion */
+
+.bio {
+    max-width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.bio-open {
+    max-width: 500px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 5px solid #6888a7;
+}
+.bio-open h2{
+    font-size: 2.5rem;
+}
+.bio-open p {
+    margin-top: 50px;
+    font-size: 2rem;
+    text-align: justify;
+}
+.bio-info table {
+    font-size: 5.5rem;
+    max-width: 400px;
+    border: 1px solid #6888a7;
+    margin-bottom: 50px;
+    border-collapse: collapse;
+}
+.bio-info table tr:nth-child(even) {
+    background-color: #6888a741
+}
+.bio-info table td {
+    font-weight: 400;
+    max-width: 160px;
+}
+.bio-info .start-td {
+    font-size: 2.3rem;
+}
+.bio-info .rightTd {
+    font-weight: 700;    
+    padding-left: 10px;
+
+}
+
+/* INICIO */
+
+.biografia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inicio, .sporting, .manU, .balonOro, .realM, .juve, .manU22, .portu, .mundiales {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px 20px 0px;
+}
+.inicio-title, .sporting-title, .juve-title, .manU22-title, .manU-title, .balonOro-title, .realM-title, .portu-title, .Mundial-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 50px;
+}
+.inicio p, .sporting p, .manU22 p, .manU p, .balonOro p, .portu p, .realM p, .juve p, .mundiales p {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+.mundiales p {
+  margin-bottom: 50px;
+}
+.sporting-paragraph p, .balonOro-text p, .juve-text p, .portu-text p {
+    max-width: 500px;
+    min-width: 300px;
+    text-align: justify;
+    margin: 30px 10px 0px;
+}
+.sporting-paragraph, .juve-paragraph {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.balonOro, .portu {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.balonOro img {
+  max-width: 200px;
+  object-fit: cover;
+  margin: 0px 0px 40px;
+}
+.portu img {
+  max-width: 200px;
+  object-fit: cover;
+  margin: 40px 0px 0px ;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 50px;
+  background-color: #405468;
+  font-size: 5rem;
+  color: azure;
+}
+footer span {
+  color: #95c33c;
+  font-size: 2.5rem;
+}
